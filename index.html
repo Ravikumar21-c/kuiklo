@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUIKLO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://lnk.ink/9A0Bp" type="image/png">
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <span>KUIK</span><span>LO</span>
+        </div>
+
+        <!-- Delivery Info -->
+        <div class="delivery">
+            <strong>Delivery in 8 minutes</strong>
+            <p>Alkapuri, Shivpuri, Chitkohra, Patna</p>
+        </div>
+
+        <!-- Search Bar -->
+        <a href="search/indexsearch.html" class="search-link">
+
+            <div class="search-bar">
+                <input type="text" placeholder='Search "chips"'>
+            </div>
+        </a>
+
+        <!-- Right Side -->
+        <div class="cta">
+            <button class="ghost btn" id="loginBtn">Sign in</button>
+
+        </div>
+
+        <!-- Cart Sidebar -->
+
+
+
+        <!-- CART SIDEBAR -->
+        <aside id="cartSidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>🛒 My Cart</h2>
+                <button class="close-btn" onclick="closeCart()">×</button>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            <div class="cart-footer">
+                <p class="cart-total">Total: ₹<span id="cartTotal">0</span></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </aside>
+
+        <!-- CART TOGGLE BUTTON -->
+        <button onclick="openCart()" class="cart-toggle">🛒 My Cart (<span id="cartCount">0</span>)</button>
+
+
+    </header>
+    <main>
+        <div class="main-container">
+            <!-- Left Container -->
+            <div class="side-container-left-container">
+                <div class="card">
+                    <img src="https://lnk.ink/fsHoY" alt="Category 1">
+                    <h4>Fruits & Vegetables</h4>
+                </div>
+                <div class="card">
+                    <img src="https://lnk.ink/4SRFL" alt="Category 2">
+                    <h4>Snacks</h4>
+                </div>
+                <div class="card">
+                    <img src="https://lnk.ink/5OzrP" alt="Category 3">
+                    <h4>Dairy</h4>
+                </div>
+            </div>
+            <!-- Center Container (your existing slider) -->
+            <div class="container">
+                <div class="slide">
+                    <div class="item" style="background-image: url(https://shorturl.at/2ywza);">
+                        <div class="content">
+                            <div class="name">Switzerland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(https://shorturl.at/Uujug);">
+                        <div class="content">
+                            <div class="name">Finland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(https://shorturl.at/XL0gU);">
+                        <div class="content">
+                            <div class="name">Iceland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(https://shorturl.at/saxFP);">
+                        <div class="content">
+                            <div class="name">Australia</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(https://lnk.ink/JyNPs);">
+                        <div class="content">
+                            <div class="name">Netherland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(https://lnk.ink/QECCk);">
+                        <div class="content">
+                            <div class="name">Ireland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                            <button>See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="button">
+                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+            <!-- Right Container -->
+            <div class="side-container-right-container">
+                <div class="card">
+                    <img src="https://lnk.ink/mktCR" alt="Offer 1">
+                    <h4>Flat 20% OFF</h4>
+                </div>
+                <div class="card">
+                    <img src="https://res.cloudinary.com/dfpoitmva/image/upload/v1757156970/Untitled_design_qejrgk.jpg"
+                        alt="Offer 2">
+                    <h4>Buy 1 Get 1 Free</h4>
+                </div>
+                <div class="card">
+                    <img src="https://lnk.ink/quCkh" alt="Offer 3">
+                    <h4>Free Delivery Over ₹199</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="gad">
+            <h1 id="gad">Sportlight</h1>
+            <!-- Categories Section -->
+            <div class="categories" id="categoryContainer"></div>
+
+        </div>
+        <div class="grocery-container">
+            <h1 class="section-title">Daily Grocery & Kirana</h1>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=vegetables+basket&image_type=photo" alt="Vegetables"
+                        class="category-image">
+                    <h3 class="category-name">Vegetables</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=fresh+fruits&image_type=photo" alt="Fresh Fruit"
+                        class="category-image">
+                    <h3 class="category-name">Fresh Fruit</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=frozen+food&image_type=photo" alt="Frozen Food"
+                        class="category-image">
+                    <h3 class="category-name">Frozen Food</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=rice+dals&image_type=photo" alt="Rice, Dals & Atta"
+                        class="category-image">
+                    <h3 class="category-name">Rice, Dals & Atta</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=masala+oil&image_type=photo" alt="Masala, Oil & Ghee"
+                        class="category-image">
+                    <h3 class="category-name">Masala, Oil & Ghee</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=milk+bakery&image_type=photo" alt="Milk, Bakery & Eggs"
+                        class="category-image">
+                    <h3 class="category-name">Milk, Bakery & Eggs</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=biscuits+cookies&image_type=photo"
+                        alt="Biscuits & Cookies" class="category-image">
+                    <h3 class="category-name">Biscuits & Cookies</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=cereals+nuts&image_type=photo" alt="Cereals & Nuts"
+                        class="category-image">
+                    <h3 class="category-name">Cereals & Nuts</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=dry+fruits&image_type=photo" alt="Dry Fruits"
+                        class="category-image">
+                    <h3 class="category-name">Dry Fruits</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=kitchen+tools&image_type=photo"
+                        alt="Kitchen tools & appliances" class="category-image">
+                    <h3 class="category-name">Kitchen tools & appliances</h3>
+                </div>
+            </div>
+
+            <h1 class="section-title">Quick Bites & Beverages</h1>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=chips+snacks&image_type=photo" alt="Chips & Snack"
+                        class="category-image">
+                    <h3 class="category-name">Chips & Snack</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=chocolates+candy&image_type=photo"
+                        alt="Chocolates & Candy" class="category-image">
+                    <h3 class="category-name">Chocolates & Candy</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=soft+drinks&image_type=photo" alt="Soft Drink & Juices"
+                        class="category-image">
+                    <h3 class="category-name">Soft Drink & Juices</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=tea+coffee&image_type=photo" alt="Tea & Coffee"
+                        class="category-image">
+                    <h3 class="category-name">Tea & Coffee</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=instant+noodles&image_type=photo" alt="Instant Noodles"
+                        class="category-image">
+                    <h3 class="category-name">Instant Noodles</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=ketchup+spreads&image_type=photo"
+                        alt="Ketchup & Spreads" class="category-image">
+                    <h3 class="category-name">Ketchup & Spreads</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=ice+cream&image_type=photo" alt="Ice Creams & Deserts"
+                        class="category-image">
+                    <h3 class="category-name">Ice Creams & Deserts</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=paan+mukhwas&image_type=photo" alt="Paan & Mukhwas"
+                        class="category-image">
+                    <h3 class="category-name">Paan & Mukhwas</h3>
+                </div>
+            </div>
+
+            <h1 class="section-title">Self Care Essentials</h1>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=soap+shampoo&image_type=photo" alt="Soap & Shampoo"
+                        class="category-image">
+                    <h3 class="category-name">Soap & Shampoo</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=hair+care&image_type=photo" alt="Hair Care"
+                        class="category-image">
+                    <h3 class="category-name">Hair Care</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=face+wash&image_type=photo" alt="Face Wash"
+                        class="category-image">
+                    <h3 class="category-name">Face Wash</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=makeup+cosmetics&image_type=photo" alt="Makeup"
+                        class="category-image">
+                    <h3 class="category-name">Makeup</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=oral+care&image_type=photo" alt="Oral Care"
+                        class="category-image">
+                    <h3 class="category-name">Oral Care</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=feminine+hygiene&image_type=photo"
+                        alt="Feminine Hygiene" class="category-image">
+                    <h3 class="category-name">Feminine Hygiene</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=health+supplements&image_type=photo"
+                        alt="Health Supplements" class="category-image">
+                    <h3 class="category-name">Health Supplements</h3>
+                </div>
+
+                <div class="category-card">
+                    <img src="https://csspicker.dev/api/image/?q=condoms+contraceptives&image_type=photo" alt="Condoms"
+                        class="category-image">
+                    <h3 class="category-name">Condoms</h3>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="product-slider-container">
+        <div class=" slider-header">
+            <h2 class="slider-title">Dairy, Bread & Eggs</h2>
+            <a href="#" class="see-all-link">see all</a>
+        </div>
+
+        <div class="slider-wrapper">
+            <button class="nav-arrow nav-arrow-left" onclick="slideLeft()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15,6 9,12 15,18"></polyline>
+                </svg>
+            </button>
+            <div class="product-slider" id="productSlider">
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=amul+masti+pouch&image_type=photo"
+                        alt="Amul Masti Pouch Curd" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Amul Masti Pouch Curd</h3>
+                    <p class="product-weight">390 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹35</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=amul+cow+milk&image_type=photo" alt="Amul Cow Milk"
+                        class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Amul Cow Milk</h3>
+                    <p class="product-weight">500 ml</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹29</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=amul+gold+milk&image_type=photo"
+                        alt="Amul Gold Full Cream Milk" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Amul Gold Full Cream Milk</h3>
+                    <p class="product-weight">500 ml</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹34</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=sudha+dairy+milk&image_type=photo"
+                        alt="Sudha Dairy Pasteurised Cow Milk" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Sudha Dairy Pasteurised Cow Milk</h3>
+                    <p class="product-weight">500 ml</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹28</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=sudha+shakti+milk&image_type=photo"
+                        alt="Sudha Dairy Shakti Fresh Milk" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Sudha Dairy Shakti Fresh Milk</h3>
+                    <p class="product-weight">500 ml</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹29</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csspicker.dev/api/image/?q=moreish+brown+bread&image_type=photo"
+                        alt="Moreish Brown Bread" class="product-image">
+                    <div class="delivery-time">
+                        <svg class="clock-icon" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        8 MINS
+                    </div>
+                    <h3 class="product-name">Moreish Brown Bread</h3>
+                    <p class="product-weight">400 g</p>
+                    <div class="product-footer">
+                        <span class="product-price">₹45</span>
+                        <button class="add-button">ADD</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-arrow nav-arrow-right" onclick="slideRight()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+    <!---nextline fruit and vegitable-->
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Partner</a></li>
+                        <li><a href="#">Franchise</a></li>
+                        <li><a href="#">Seller</a></li>
+                        <li><a href="#">Warehouse</a></li>
+                        <li><a href="#">Deliver</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Recipes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categories <span class="see-all">see all</span></h3>
+                    <ul>
+                        <li><a href="#">Vegetables & Fruits</a></li>
+                        <li><a href="#">Cold Drinks & Juices</a></li>
+                        <li><a href="#">Bakery & Biscuits</a></li>
+                        <li><a href="#">Dry Fruits, Masala & Oil</a></li>
+                        <li><a href="#">Paan Corner</a></li>
+                        <li><a href="#">Pharma & Wellness</a></li>
+                        <li><a href="#">Ice Creams & Frozen Desserts</a></li>
+                        <li><a href="#">Beauty & Cosmetics</a></li>
+                        <li><a href="#">Electronics & Electricals</a></li>
+                        <li><a href="#">Toys & Games</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <ul class="no-header">
+                        <li><a href="#">Dairy & Breakfast</a></li>
+                        <li><a href="#">Instant & Frozen Food</a></li>
+                        <li><a href="#">Sweet Tooth</a></li>
+                        <li><a href="#">Sauces & Spreads</a></li>
+                        <li><a href="#">Organic & Premium</a></li>
+                        <li><a href="#">Cleaning Essentials</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Magazines</a></li>
+                        <li><a href="#">Stationery Needs</a></li>
+                        <li><a href="#">Print Store</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <ul class="no-header">
+                        <li><a href="#">Munchies</a></li>
+                        <li><a href="#">Tea, Coffee & Health Drinks</a></li>
+                        <li><a href="#">Atta, Rice & Dal</a></li>
+                        <li><a href="#">Chicken, Meat & Fish</a></li>
+                        <li><a href="#">Baby Care</a></li>
+                        <li><a href="#">Home & Office</a></li>
+                        <li><a href="#">Pet Care</a></li>
+                        <li><a href="#">Fashion & Accessories</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">E-Gift Cards</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p class="copyright">©Kuiklo 2025</p>
+                    <p class="company-info">Kuiklo is owned and managed by Perficient Marketing Private Limited</p>
+                </div>
+
+                <div class="footer-bottom-center">
+                    <span class="download-text">Download App</span>
+                    <div class="app-buttons">
+                        <a href="#" class="app-button">
+                            <img src="https://csspicker.dev/api/image/?q=app+store+badge&image_type=vector"
+                                alt="Download on App Store">
+                        </a>
+                        <a href="#" class="app-button">
+                            <img src="https://csspicker.dev/api/image/?q=google+play+badge&image_type=vector"
+                                alt="Get it on Google Play">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-right">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                                    fill="#6B7280" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    fill="#6B7280" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                    fill="#6B7280" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 3.605-2.068 4.777-1.172 1.172-2.92 1.899-4.777 2.068-.344.03-.693.045-1.043.045s-.699-.015-1.043-.045c-1.858-.169-3.605-.896-4.777-2.068C2.688 11.765 1.96 10.018 1.792 8.16 1.762 7.816 1.747 7.467 1.747 7.117s.015-.699.045-1.043C2.96 4.216 3.688 2.469 4.86 1.297 6.032.125 7.779-.602 9.637-.771c.344-.03.693-.045 1.043-.045s.699.015 1.043.045c1.858.169 3.605.896 4.777 2.068 1.172 1.172 1.899 2.92 2.068 4.777.03.344.045.693.045 1.043s-.015.699-.045 1.043z"
+                                    fill="#6B7280" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+<script src="script.js"></script>
+<!-- Font Awesome for Cart Icon -->
+<script src="https://kit.fontawesome.com/389adaa419.js" crossorigin="anonymous"></script>
+
+
+
+</html>
